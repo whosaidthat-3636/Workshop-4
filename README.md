@@ -1,8 +1,49 @@
-# Workshop-4
+ # Workshop-4
+ Link: [https://whosaidthat-3636.github.io/Workshop-4/]
+In this workshop, it focuses on interactivity allowing users to build their own character 
 
 ## Tasks
 - Create an interactive p5js sketch with at least 3 different kinds of user input events
 - Experiment with ways to record and redeploy inputs from the user
+
+## Documentation
+- I thought to execute an idea of allowing user's to build a character with UI elements
+  
+### 1) Setup 
+- I started off with building the head
+- Using ellipses
+- Didn't want the head to be too circular so added on another ellipses on top to give if a softer, "cuter" look
+```
+ ellipse(250, 350, 208, 200);
+ ellipse(250, 370, 210, 180);
+```
+
+### 2) Slider
+- Slider used to alter the color of the animal
+- I had trouble figuring how to set a sort of brownish tone (cause it would "make sense" for all animal options) colors for the slider
+- I only knew how to set for RGB tones
+- I turned to ChatGPT using the prompt "How do I set the slider to have a more brown tone" and attaching my lines of code
+  * Response: 
+``` 
+let slider;
+
+//in setup
+  slider = createSlider(0, 255, 127);
+  slider.position(20, 520);
+  slider.size(210);
+
+//ChatGPT response
+  let val = slider.value();
+  fill(210 - val / 4, 180 - val / 4, 130); 
+  ellipse(250, 350, 208, 200);
+  ellipse(250, 370, 210, 180);
+```
+
+### 3) Input box
+- Input box for user to name their character
+- Answers to the input box will be displayed on the top half of the sketch
+
+
 
 ## Notes 
 ### 1) location of image based on mousepressed
