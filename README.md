@@ -111,8 +111,9 @@ let x = selection.selected();
 ```
 
 
+
 ## Notes 
-### 1) location of image based on mousepressed
+### 1) Location of image based on mousepressed
 - preload function with loadImage and array 
 
 **_in SETUP_**
@@ -123,7 +124,7 @@ image/text/etc(r, mouseX, mouseY);}
 // when mouse pressed on x, y coordinate imagery is presented on the coordinated hovered by mouse
 ```
 
-### 2) button as opposed to mouse click
+### 2) Button as opposed to mouse click
 ```
 let button = createButton('text display');
 ```
@@ -140,8 +141,7 @@ image/text/etc(r, random(width), random(height));
 // image placed at random})
 ```
 
-### 3) checkbox
-- create checkbox variable
+### 3) Checkbox variable
 ```
 let checkbox;
 ```
@@ -163,7 +163,7 @@ conditional statement};
 // else = if unchecked condition will occur
 ```
 
-### 4) slider
+### 4) Slider
 ```
 let slider;
 ```
@@ -181,7 +181,7 @@ let val = slider.value();
 command(val);/ inputs of other commands ie in images with update pixel
 ```
 
-### 5) drop down menu
+### 5) Drop down menu
 **_in SETUP_**
 ```
 selection = createSelect();
@@ -204,7 +204,7 @@ image(variable, x, y);
 // three equals: exactly equal to
 ```
 
-### 6) inputs
+### 6) Inputs
 - input box 
 **_in SETUP_**
 ```
@@ -217,13 +217,13 @@ let text = theInput.value();
 text(words, x, y);
 ```
 
-### 7) using text
+### 7) Using text
 ```
 function preload(){
 variable = loadStrings('texts/txt file name')}
 ```
 
-### 8) formatting
+### 8) Formatting
 ```
 variable = create element('h2, Questions?')
 // h2: heading size
@@ -232,7 +232,7 @@ greeting.style('color', 'black');
 greeting.position();
 ```
 
-### 9) ask something function
+### 9) Ask something function
 **_in SETUP_**
 ```
 function askSomething(){
@@ -252,7 +252,7 @@ text(listQuestions[x], x, y,)}
 // text into input box to display on set coordinates in the for command
 ```
 
-### 10) sizing sketch to browser
+### 10) Sizing sketch to browser
 ```
 createCanvas(windowWidth, windowHeight);
 function windowResized(){
