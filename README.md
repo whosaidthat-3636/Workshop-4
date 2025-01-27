@@ -12,6 +12,14 @@ In this workshop, it focuses on interactivity allowing users to build their own 
   
 ### 1) Setup 
 - I started off with building the head
+- Putting text on the canvas as instructor to help user understand the goal
+- I had trouble getting the text to show up and through trial and error of copy and pasting in different parts of the code
+```
+// in draw, last line of code
+fill(0);
+    textSize(15)
+    text('Build a friend!', 75, 40);
+```
 - Using ellipses
 - Didn't want the head to be too circular so added on another ellipses on top to give if a softer, "cuter" look
 ```
@@ -62,6 +70,45 @@ theInput = createInput();
 ```
 
 ### 4) Drop down selection box
+- Four options in total: rabbit, bear, dog, cat
+- The head shape remains the same but changing ears of corresponding animals as a form of recognition
+- Using the if else function to execute this idea
+```
+// in setup
+ selection = createSelect();
+  selection.position(430, 510);
+  selection.option('rabbit');
+  selection.option('bear');
+  selection.option('dog');
+  selection.option('cat');
+
+//in draw
+let x = selection.selected();
+  if(x === 'cat'){
+    triangle(160, 300, 150, 170, 250, 300);
+    triangle(340, 300, 350, 170, 250, 300);
+   } else if (x === 'dog') {
+    // darker brown for ears
+    fill(150, 100, 50); 
+    ellipse(180, 310, 60, 120); 
+    ellipse(320, 310, 60, 120); 
+  } else if (x === 'bear') {
+    fill(150, 100, 50); 
+    ellipse(150, 260, 90, 90); 
+    ellipse(350, 255, 90, 90);    
+  } else if (x === 'rabbit') {
+    fill(255, 200, 180);
+     push();
+    translate(170, 300); 
+    rotate(-PI / 6); 
+    ellipse(0, -60, 70, 200); 
+    pop();
+    push();
+    translate(330, 300); 
+    rotate(PI / 6); 
+    ellipse(0, -60, 70, 200); 
+    pop();
+```
 
 
 ## Notes 
