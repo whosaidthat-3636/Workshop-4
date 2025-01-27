@@ -1,5 +1,6 @@
- # Workshop-4
- Link: [https://whosaidthat-3636.github.io/Workshop-4/]
+# Workshop-4
+Link: [https://whosaidthat-3636.github.io/Workshop-4/]
+ 
 In this workshop, it focuses on interactivity allowing users to build their own character 
 
 ## Tasks
@@ -27,12 +28,12 @@ In this workshop, it focuses on interactivity allowing users to build their own 
 ``` 
 let slider;
 
-//in setup
+// in setup
   slider = createSlider(0, 255, 127);
   slider.position(20, 520);
   slider.size(210);
 
-//ChatGPT response
+// ChatGPT response
   let val = slider.value();
   fill(210 - val / 4, 180 - val / 4, 130); 
   ellipse(250, 350, 208, 200);
@@ -42,7 +43,25 @@ let slider;
 ### 3) Input box
 - Input box for user to name their character
 - Answers to the input box will be displayed on the top half of the sketch
+- Having instruction in input box so user has an idea of what it's meant for
+```
+let theInput;
 
+// in setup
+theInput = createInput();
+  theInput.attribute('placeholder', 'Name your animal');
+  theInput.position(20, 500);
+  theInput.size(200);
+
+// in draw
+ let words = theInput.value();
+  fill(0);
+  textAlign(CENTER);
+  textSize(32);
+  text(words, 230, 120);
+```
+
+### 4) Drop down selection box
 
 
 ## Notes 
