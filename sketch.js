@@ -4,18 +4,14 @@ let theInput;
 function setup() {
   createCanvas(500, 500);
   noStroke();
-  
-  fill(0);
-  textSize(15);
-  text('My name is', 0, 510);
-  text('Color', 0, 530);
-  
+
   slider = createSlider(0, 255, 127);
-  slider.position(20, 550);
+  slider.position(20, 520);
   slider.size(210);
   
   theInput = createInput();
-  theInput.position(20, 520);
+  theInput.attribute('placeholder', 'Name your animal');
+  theInput.position(20, 500);
   theInput.size(200);
   
   selection = createSelect();
@@ -24,7 +20,7 @@ function setup() {
   selection.option('bear');
   selection.option('dog');
   selection.option('cat');
-  
+ 
 }
 
 function draw() {
@@ -67,6 +63,10 @@ function draw() {
     rotate(PI / 6); 
     ellipse(0, -60, 70, 200); 
     pop();
+
+    fill(0);
+    textSize(15)
+    text('Build a friend!', 75, 40);
     
   }
 }
